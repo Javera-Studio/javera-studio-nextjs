@@ -300,7 +300,7 @@ function FaceAndMore() {
             </div>
             <p className="font-serif text-lg text-ink leading-relaxed">Das Ergebnis: Eine moderne Premium-Website, die Kompetenz sichtbar macht und Vertrauen schafft.</p>
             <a href="https://faceandmore.at" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-mauve transition-all hover:scale-[1.02] hover:shadow-md font-medium w-fit">
-              Projekt ansehen <span aria-hidden>→</span>
+              Webseite ansehen <span aria-hidden>→</span>
             </a>
           </div>
           <div className="md:col-span-5">
@@ -371,7 +371,7 @@ function FaceAndMoreSocial() {
               </div>
               <div
                 className="absolute bottom-0 w-[41%] z-20"
-                style={{ left: "50%", transform: "translateY(-30%)", filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.14))" }}
+                style={{ left: "38%", transform: "translateY(-30%)", filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.14))" }}
               >
                 <Image
                   src="/insta.mockup.png"
