@@ -147,8 +147,6 @@
   html {
     background-color: var(--color-background);
     color-scheme: light;
-    scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
   }
 
   body {
