@@ -195,93 +195,75 @@ function Warum() {
 }
 
 function Angebot() {
-  const free = ["Erstgespräch & Kennenlernen", "Projektbesprechung & erste Ideen", "Erste Design-/Demo-Vorschau", "Individuelle Konzeptideen für deinen Online-Auftritt", "Beratung zu Aufbau, Buchungssystem & Struktur"];
-  const paid = ["Online-Präsenz Analyse & Optimierungsplan", "Individuelle Website-Erstellung", "Logo Design & Branding-Elemente", "Flyer, Visitenkarten & Print-Design (druckfertig)", "Social Media Design (Posts, Stories, Cover Sets)", "Mobile Optimierung & SEO-Grundoptimierung", "Domain & Hosting Einrichtung", "Buchungs-/Kalenderlösungen", "Zusätzliche Unterseiten oder Erweiterungen", "Änderungen, Pflege & laufende Betreuung der Inhalte"];
+  const websitePackages = [
+    { name: "Onepager", price: "500 €", desc: "Dein kompletter Webauftritt kompakt auf einer Seite – ideal für Selbstständige und Unternehmen, die professionell online sichtbar sein möchten.", meta: "1 Seite · 5–7 Tage" },
+    { name: "Business Website", price: "900 €", desc: "Mehr Raum für dein Angebot: Startseite plus bis zu 3 Zusatzseiten für Leistungen, Über mich/Team, Preise oder andere wichtige Inhalte.", meta: "Startseite + bis zu 3 Zusatzseiten · 10–14 Tage", featured: true },
+    { name: "Business Website Plus", price: "1.700 €", desc: "Für umfangreiche Angebote und mehrere Leistungsbereiche – mit bis zu 10 Seiten und genügend Raum, um dein Unternehmen professionell und übersichtlich zu präsentieren.", meta: "Bis zu 10 Seiten · Umfang nach Absprache" },
+  ];
+  const print = [
+    ["Flyer einseitig", "100 €"], ["Flyer zweiseitig", "150 €"], ["Roll-Up / Banner", "200 €"],
+    ["Visitenkarte", "100 €"], ["Gutscheine", "100 €"], ["Logo Design", "250 €"],
+  ];
+  const social = [
+    ["Social Media Paket · 5 Posts", "220 €"], ["Story Templates · 5 Stück", "150 €"], ["Instagram Highlight Cover · 6 Stück", "90 €"],
+  ];
 
   return (
     <section id="angebot" className="py-12 md:py-16 bg-cream">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-16">
-          <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Mein Angebot</div>
-          <h2 className="reveal font-serif text-4xl md:text-5xl text-ink leading-tight">Was du bei mir bekommst</h2>
-          <p className="reveal reveal-delay mt-4 text-muted-foreground text-lg">Transparente Leistungen – von der kostenlosen Erstberatung bis zum fertigen Gesamtauftritt.</p>
+        <div className="max-w-2xl mb-12">
+          <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Leistungen &amp; Preise</div>
+          <h2 className="reveal font-serif text-4xl md:text-5xl text-ink leading-tight">Was dein Auftritt braucht – transparent kalkuliert.</h2>
+          <p className="reveal reveal-delay mt-4 text-muted-foreground text-lg">Wähle den Umfang, der zu deinem Business passt. Designqualität, mobile Optimierung und SEO-Grundlagen sind bei jeder Website inklusive.</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          <div className="reveal relative rounded-3xl border border-border/60 bg-background p-8 md:p-10 shadow-sm">
-            <div className="absolute -top-3 left-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mint-soft text-ink text-[11px] uppercase tracking-[0.2em]">
-              <span className="h-1.5 w-1.5 rounded-full bg-ink/70" />Kostenlos
+
+        <h3 className="font-serif text-3xl text-ink mb-6">Webdesign</h3>
+        <div className="grid md:grid-cols-3 gap-5 items-stretch">
+          {websitePackages.map((pkg) => (
+            <div key={pkg.name} className={`relative rounded-3xl p-7 flex flex-col bg-background ${pkg.featured ? "border-2 border-primary" : "border border-border/60"}`}>
+              {pkg.featured && <span className="absolute -top-3 left-6 bg-accent text-primary text-[11px] font-semibold px-3 py-1 rounded-full">Empfohlen</span>}
+              <h4 className="font-serif text-2xl text-ink">{pkg.name}</h4>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{pkg.desc}</p>
+              <p className="mt-6 text-3xl font-bold text-ink">{pkg.price} <span className="text-sm font-normal text-muted-foreground">einmalig</span></p>
+              <p className="mt-2 text-xs text-muted-foreground">{pkg.meta}</p>
             </div>
-            <h3 className="font-serif text-2xl md:text-3xl text-ink mt-2">Unverbindlich &amp; kostenlos</h3>
-            <p className="mt-3 text-muted-foreground leading-relaxed">Kennenlernen, beraten, Ideen sammeln – ohne Verpflichtung.</p>
-            <ul className="mt-8 space-y-4">
-              {free.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-ink">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-mauve flex-shrink-0" /><span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <a href="#schreib-mir" className="inline-block mt-10 px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-mauve transition-all hover:scale-[1.02] hover:shadow-md font-medium">
-              Kostenlose Demo anfragen
-            </a>
+          ))}
+        </div>
+        <p className="mt-4 text-sm text-muted-foreground text-center">Du brauchst mehr als 10 Seiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.</p>
+
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
+          <div className="rounded-3xl border border-border/60 bg-background p-7">
+            <h3 className="font-serif text-2xl text-ink">Grafik &amp; Print</h3>
+            <div className="mt-5 divide-y divide-border/50">
+              {print.map(([name, price]) => <div key={name} className="flex justify-between gap-4 py-3 text-sm"><span>{name}</span><strong>{price}</strong></div>)}
+            </div>
           </div>
-          <div className="reveal reveal-delay relative rounded-3xl border border-mauve/30 bg-gradient-to-br from-peach-soft via-background to-accent/40 p-8 md:p-10 shadow-sm">
-            <div className="absolute -top-3 left-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mauve text-white text-[11px] uppercase tracking-[0.2em]">
-              <span className="h-1.5 w-1.5 rounded-full bg-white/80" />Leistungen
+          <div className="rounded-3xl border border-border/60 bg-background p-7">
+            <h3 className="font-serif text-2xl text-ink">Social Media Design</h3>
+            <div className="mt-5 divide-y divide-border/50">
+              {social.map(([name, price]) => <div key={name} className="flex justify-between gap-4 py-3 text-sm"><span>{name}</span><strong>{price}</strong></div>)}
             </div>
-            <h3 className="font-serif text-2xl md:text-3xl text-ink mt-2">Kostenpflichtige Leistungen</h3>
-            <p className="mt-3 text-muted-foreground leading-relaxed">Alles, was dein Studio professionell, sichtbar und unverwechselbar macht – online wie offline.</p>
-            <ul className="mt-8 grid sm:grid-cols-1 gap-y-4">
-              {paid.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-ink">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-mauve flex-shrink-0" /><span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-8 text-sm text-muted-foreground">Individuelles Angebot nach deinem Bedarf – fair &amp; transparent kalkuliert.</p>
           </div>
         </div>
 
-        <div className="reveal mt-8 relative rounded-3xl border border-mauve/30 bg-gradient-to-br from-peach-soft via-background to-accent/40 p-8 md:p-10 shadow-sm">
-          <div className="absolute -top-3 left-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mauve text-white text-[11px] uppercase tracking-[0.2em]">
-            <span className="h-1.5 w-1.5 rounded-full bg-white/80" />Strategie-Service
-          </div>
+        <div className="reveal mt-6 rounded-3xl border border-mauve/30 bg-gradient-to-br from-peach-soft via-background to-accent/40 p-8 md:p-10">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
             <div>
-              <h3 className="font-serif text-2xl md:text-3xl text-ink mt-2">Online-Präsenz Analyse</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed max-w-xl">
-                Du hast bereits eine Website oder einen bestehenden Online-Auftritt und möchtest wissen, wo Potenzial verloren geht?<br /><br />
-                Die Online-Präsenz Analyse bewertet Website, Google-Profil, Sichtbarkeit und Außenwirkung und liefert konkrete Empfehlungen zur Verbesserung.
-              </p>
+              <h3 className="font-serif text-2xl md:text-3xl text-ink">Online-Präsenz Analyse</h3>
+              <p className="mt-3 text-muted-foreground leading-relaxed max-w-xl">Analyse von Website, Google-Profil, Sichtbarkeit und Außenwirkung mit konkreten Empfehlungen zur Verbesserung.</p>
             </div>
-            <div className="shrink-0 sm:text-right mt-2">
-              <p className="font-serif text-3xl text-ink leading-none">150 €</p>
-              <p className="text-sm text-muted-foreground mt-1">einmalig</p>
-            </div>
+            <div className="shrink-0"><p className="font-serif text-3xl text-ink">150 €</p><p className="text-sm text-muted-foreground">einmalig</p></div>
           </div>
-          <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3">
-            {["Website Analyse", "Google Business Profil Analyse", "Sichtbarkeit & Auffindbarkeit", "Branding & Vertrauen", "Buchungs- und Kontaktmöglichkeiten", "Konkreter Optimierungsplan"].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-ink">
-                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-mauve flex-shrink-0" /><span className="leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm text-ink/80 italic leading-relaxed">Ergebnis: Ein strukturierter Bericht mit klaren Verbesserungsvorschlägen und priorisierten Handlungspunkten.</p>
-          <div className="mt-5 flex items-start gap-2 bg-background/60 border border-mauve/20 rounded-2xl px-4 py-3">
-            <span className="shrink-0 text-base leading-[1.5]">💎</span>
-            <p className="text-sm text-ink"><strong>Bei Buchung einer Premium Website kostenlos enthalten.</strong></p>
-          </div>
+          <p className="mt-5 text-sm text-ink"><strong>Bei Buchung einer Business Website oder Business Website Plus inklusive.</strong></p>
         </div>
 
-        <div className="mt-12 text-center">
-          <Link href="/preise" className="inline-flex items-center gap-2 text-sm font-medium text-ink border-b border-ink/30 pb-1 hover:border-ink transition">
-            Alle Preise ansehen <span aria-hidden>→</span>
-          </Link>
+        <div className="mt-8 text-center">
+          <a href="#schreib-mir" className="inline-block px-7 py-3.5 rounded-full bg-primary text-primary-foreground hover:bg-mauve transition font-medium">Kostenlose Analyse &amp; Demo anfragen</a>
         </div>
       </div>
     </section>
   );
 }
-
 function FaceAndMore() {
   const leistungen = ["Kompletter Website-Relaunch", "Migration von Wix zu Vercel", "Mobile Optimierung", "Domain erfolgreich migriert", "Leistungsseiten & FAQ-Bereich", "SEO-freundliche Struktur"];
   return (
