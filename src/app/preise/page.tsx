@@ -321,7 +321,7 @@ export default function PreisePage() {
             <div className="bg-background border border-border rounded-2xl p-6 flex flex-col">
               <p className="font-semibold text-ink">Einzeländerung</p>
               <p className="text-xs text-muted-foreground mt-1">Einzelne spontane Änderungen ohne Wartungspaket</p>
-              <p className="text-2xl font-bold text-ink mt-auto pt-4">50 € <span className="text-sm font-normal text-muted-foreground">einmalig</span></p>
+              <p className="text-2xl font-bold text-ink mt-auto pt-4">90 € <span className="text-sm font-normal text-muted-foreground">einmalig</span></p>
             </div>
           </div>
 
