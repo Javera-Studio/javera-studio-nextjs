@@ -154,11 +154,11 @@ export default function PreisePage() {
 
           {/* WEBSITE */}
           <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground mb-5">Website</p>
-          <div className="grid md:grid-cols-2 gap-5 items-stretch">
-            {/* Starter Website */}
+          <div className="grid md:grid-cols-3 gap-5 items-stretch">
+            {/* Onepager */}
             <div className="bg-background border border-border rounded-2xl p-8 flex flex-col">
-              <p className="text-lg font-semibold text-ink mb-1">Starter Website</p>
-              <p className="text-sm text-muted-foreground">One-Pager · alle Infos auf einer Seite</p>
+              <p className="text-lg font-semibold text-ink mb-1">Onepager</p>
+              <p className="text-sm text-muted-foreground">Dein kompletter Webauftritt kompakt auf einer Seite – ideal für Selbstständige und Unternehmen, die professionell online sichtbar sein möchten.</p>
               <div className="py-5">
                 <div className="text-3xl font-bold text-ink leading-none">
                   500 €{" "}
@@ -185,19 +185,19 @@ export default function PreisePage() {
               </div>
             </div>
 
-            {/* Premium Website */}
+            {/* Business Website */}
             <div className="relative bg-background border-2 border-primary rounded-2xl p-8 flex flex-col">
               <div className="absolute -top-3 left-8 bg-accent text-primary text-[11px] font-semibold px-3 py-1 rounded-full">
                 Empfohlen
               </div>
-              <p className="text-lg font-semibold text-ink mb-1">Premium Website</p>
-              <p className="text-sm text-muted-foreground">Mehrseiter · je nach Wunsch &amp; Umfang</p>
+              <p className="text-lg font-semibold text-ink mb-1">Business Website</p>
+              <p className="text-sm text-muted-foreground">Mehr Raum für dein Angebot: Startseite plus bis zu 3 Zusatzseiten für Leistungen, Über mich/Team, Preise oder andere wichtige Inhalte.</p>
               <div className="py-5">
                 <div className="text-3xl font-bold text-ink leading-none">
-                  ab 900 €{" "}
+                  900 €{" "}
                   <span className="text-sm font-normal text-muted-foreground">einmalig</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">Mehrere Seiten · 10–14 Tage</p>
+                <p className="text-sm text-muted-foreground mt-2">Startseite + bis zu 3 Zusatzseiten · 10–14 Tage</p>
               </div>
               <hr className="border-t border-border/60 mb-5" />
               <SectionLabel>Design &amp; Inhalt</SectionLabel>
@@ -221,7 +221,42 @@ export default function PreisePage() {
                 </div>
               </div>
             </div>
+
+            {/* Business Website Plus */}
+            <div className="bg-background border border-border rounded-2xl p-8 flex flex-col">
+              <p className="text-lg font-semibold text-ink mb-1">Business Website Plus</p>
+              <p className="text-sm text-muted-foreground">Für umfangreiche Angebote und mehrere Leistungsbereiche – mit bis zu 10 Seiten und genügend Raum, um dein Unternehmen professionell und übersichtlich zu präsentieren.</p>
+              <div className="py-5">
+                <div className="text-3xl font-bold text-ink leading-none">
+                  1.700 €{" "}
+                  <span className="text-sm font-normal text-muted-foreground">einmalig</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-2">Bis zu 10 Seiten · Umfang nach Absprache</p>
+              </div>
+              <hr className="border-t border-border/60 mb-5" />
+              <SectionLabel>Design &amp; Inhalt</SectionLabel>
+              {premiumDesignContent.map((f) => <FeatureRow key={f.title} {...f} />)}
+              <SectionLabel>Features</SectionLabel>
+              {premiumOptionen.map((f) => <FeatureRow key={f.title} {...f} />)}
+              <div className="mt-3 flex gap-2.5 bg-peach-soft/60 border border-mauve/20 rounded-xl px-3 py-2.5">
+                <span className="shrink-0 text-sm leading-[1.4] mt-px">✨</span>
+                <p className="text-sm font-semibold text-ink leading-[1.4]">Online-Präsenz Analyse inklusive</p>
+              </div>
+              <div className="mt-auto">
+                <SectionLabel>Support</SectionLabel>
+                {premiumSupport.map((f) => <FeatureRow key={f.title} {...f} />)}
+                <div className="pt-6">
+                  <Link href="/#schreib-mir" className="block text-center py-3 border border-border text-ink font-semibold text-sm rounded-xl hover:bg-secondary transition">
+                    Kostenlose Analyse &amp; Demo anfragen
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <p className="text-sm text-muted-foreground mt-4 text-center">
+            Du brauchst mehr als 10 Seiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.
+          </p>
 
           {/* Online-Präsenz Analyse */}
           <div className="mt-5 bg-background border border-border rounded-2xl p-6 md:p-8">
