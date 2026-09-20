@@ -37,9 +37,9 @@ const services = [
 ];
 
 const websitePackages = [
-  { name: "Onepager", price: "500 €", desc: "Dein kompletter Webauftritt auf einer Seite.", meta: "1 Seite · 5–7 Tage" },
-  { name: "Business Website", price: "900 €", desc: "Startseite und bis zu 3 Zusatzseiten für dein Angebot, dein Team oder weitere Inhalte.", meta: "Startseite + bis zu 3 Zusatzseiten · 10–14 Tage", featured: true },
-  { name: "Business Website Plus", price: "1.700 €", desc: "Für mehrere Leistungsbereiche und umfangreiche Angebote.", meta: "Startseite + bis zu 10 Zusatzseiten · Umfang nach Absprache" },
+  { name: "Onepager", price: "500 €", desc: "Dein kompletter Webauftritt auf einer Seite.", meta: "1 Seite · 5–7 Tage", support: "2 Korrekturrunden · 14 Tage Support", analysis: false },
+  { name: "Business Website", price: "900 €", desc: "Startseite und bis zu 3 Zusatzseiten für dein Angebot, dein Team oder weitere Inhalte.", meta: "Startseite + bis zu 3 Zusatzseiten · 10–14 Tage", support: "4 Korrekturrunden · 30 Tage Support", analysis: true, featured: true },
+  { name: "Business Website Plus", price: "1.700 €", desc: "Für mehrere Leistungsbereiche und umfangreiche Angebote.", meta: "Startseite + bis zu 10 Zusatzseiten · Zeitrahmen nach Absprache", support: "4 Korrekturrunden · 30 Tage Support", analysis: true },
 ];
 
 const printPrices = [
@@ -59,7 +59,7 @@ const steps = [
 ];
 
 const faqs = [
-  { q: "Wie lange dauert es, bis meine Website fertig ist?", a: "Ein One-Pager ist meist in 5–7 Tagen umsetzbar, umfangreichere Websites in etwa 10–14 Tagen. Entscheidend ist auch, wie schnell wir Inhalte und Korrekturen abstimmen." },
+  { q: "Wie lange dauert es, bis meine Website fertig ist?", a: "Ein Onepager ist meist in 5–7 Tagen umsetzbar, eine Business Website in etwa 10–14 Tagen. Den Zeitrahmen für eine Business Website Plus legen wir je nach Umfang fest. Entscheidend ist auch, wie schnell wir Inhalte und Korrekturen abstimmen." },
   { q: "Brauche ich eigene Texte oder Bilder?", a: "Nein. Ich unterstütze dich bei Struktur und Texten. Eigene hochwertige Bilder sind ideal; falls sie noch fehlen, finden wir gemeinsam eine passende Lösung." },
   { q: "Ist meine Website auch für Handys optimiert?", a: "Ja. Jede Website wird für Smartphone, Tablet und Desktop gestaltet und geprüft." },
   { q: "Hilfst du bei Domain, Hosting und Buchungssystem?", a: "Ja. Ich unterstütze dich bei der Einrichtung und Anbindung. Domain und Hosting laufen auf deinen Namen, damit du unabhängig bleibst." },
@@ -166,9 +166,12 @@ function Pricing() {
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{pkg.desc}</p>
               <p className="mt-6 text-3xl font-bold text-ink">{pkg.price} <span className="text-sm font-normal text-muted-foreground">einmalig</span></p>
               <p className="mt-2 text-xs text-muted-foreground">{pkg.meta}</p>
+              <p className="mt-2 text-xs text-muted-foreground">{pkg.support}</p>
+              {pkg.analysis && <p className="mt-2 text-xs font-medium text-ink">Online-Präsenz Analyse inklusive</p>}
             </div>
           ))}
         </div>
+        <p className="mt-4 text-center text-sm text-muted-foreground">Zusatzseiten sind Inhaltsseiten neben der Startseite. Impressum und Datenschutzerklärung zählen nicht dazu.</p>
         <p className="mt-4 text-center text-sm text-muted-foreground">Du brauchst mehr als 10 Zusatzseiten oder besondere Funktionen? Größere Projekte kalkuliere ich passend zu deinem Bedarf.</p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">

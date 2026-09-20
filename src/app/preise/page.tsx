@@ -64,15 +64,15 @@ export default function PreisePage() {
   ];
 
   const premiumDesignContent: FeatureItem[] = [
-    { included: true, title: "Premium Branding & Design", desc: "Hochwertiger Markenauftritt mit exklusivem Design." },
+    { included: true, title: "Individuelles Design", desc: "Passend zu deinem Studio, deinen Farben und deiner Marke." },
     { included: true, title: "Mehrere Seiten", desc: "Mehr Platz für Leistungen, Bewertungen, Über mich und mehr." },
     { included: true, title: "Professionelle Texte", desc: "Texte werden individuell auf dein Business abgestimmt." },
     { included: true, title: "Erweiterte Galerie", desc: "Mehr Bilder, Vorher-Nachher-Ergebnisse und Referenzen." },
   ];
 
   const premiumOptionen: FeatureItem[] = [
-    { included: true, title: "Sanfte Premium-Animationen", desc: "Elegante Effekte sorgen für einen modernen und hochwertigen Eindruck." },
-    { included: true, title: "Instagram Feed Integration", desc: "Deine neuesten Instagram-Beiträge direkt auf der Website." },
+    { included: true, title: "Gezielte Interaktionen nach Bedarf", desc: "Dezente Effekte unterstützen die Bedienung und passen zu deiner Marke." },
+    { included: true, title: "Instagram Feed Integration auf Wunsch", desc: "Deine neuesten Instagram-Beiträge können auf der Website gezeigt werden." },
     { included: true, title: "Integration bestehender Buchungssysteme", desc: "Vorhandene Buchungstools werden professionell eingebunden." },
     { included: true, title: "SEO-Basisoptimierung", desc: "Optimierung für eine bessere Auffindbarkeit bei Google." },
   ];
@@ -202,7 +202,7 @@ export default function PreisePage() {
               <hr className="border-t border-border/60 mb-5" />
               <SectionLabel>Design &amp; Inhalt</SectionLabel>
               {premiumDesignContent.map((f) => <FeatureRow key={f.title} {...f} />)}
-              <SectionLabel>Premium Features</SectionLabel>
+              <SectionLabel>Funktionen</SectionLabel>
               {premiumOptionen.map((f) => <FeatureRow key={f.title} {...f} />)}
               <div className="mt-3 flex gap-2.5 bg-peach-soft/60 border border-mauve/20 rounded-xl px-3 py-2.5">
                 <span className="shrink-0 text-sm leading-[1.4] mt-px">✨</span>
@@ -255,6 +255,9 @@ export default function PreisePage() {
           </div>
 
           <p className="text-sm text-muted-foreground mt-4 text-center">
+            Zusatzseiten sind Inhaltsseiten neben der Startseite. Impressum und Datenschutzerklärung zählen nicht dazu.
+          </p>
+          <p className="text-sm text-muted-foreground mt-3 text-center">
             Du brauchst mehr als 10 Zusatzseiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.
           </p>
 
@@ -285,7 +288,7 @@ export default function PreisePage() {
             </div>
             <div className="bg-peach-soft border border-mauve/20 rounded-xl px-4 py-3 flex items-start gap-2">
               <span className="shrink-0 text-base leading-[1.4] mt-px">💎</span>
-              <p className="text-sm text-ink"><strong>Bei Buchung einer Premium Website kostenlos enthalten.</strong></p>
+              <p className="text-sm text-ink"><strong>Bei Buchung einer Business Website oder Business Website Plus inklusive.</strong></p>
             </div>
           </div>
 
@@ -370,7 +373,7 @@ export default function PreisePage() {
               <div className="relative bg-background border-2 border-primary rounded-2xl p-6">
                 <div className="absolute -top-3 left-6 bg-accent text-primary text-[11px] font-semibold px-3 py-1 rounded-full">Komplett</div>
                 <p className="font-semibold text-ink mb-1 mt-1">Beauty Studio Komplett</p>
-                <p className="text-xs text-muted-foreground mb-4">Premium Website + Logo + 10 Social Media Posts + Flyer</p>
+                <p className="text-xs text-muted-foreground mb-4">Business Website + Logo + 10 Social Media Posts + Flyer</p>
                 <p className="text-2xl font-bold text-ink">1.390 €</p>
                 <p className="text-xs text-muted-foreground mt-1">statt 1.640 € einzeln</p>
               </div>
