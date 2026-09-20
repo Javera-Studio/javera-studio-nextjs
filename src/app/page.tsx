@@ -196,9 +196,9 @@ function Warum() {
 
 function Angebot() {
   const websitePackages = [
-    { name: "Onepager", price: "500 €", desc: "Dein kompletter Webauftritt kompakt auf einer Seite – ideal für Selbstständige und Unternehmen, die professionell online sichtbar sein möchten.", meta: "1 Seite · 5–7 Tage" },
-    { name: "Business Website", price: "900 €", desc: "Mehr Raum für dein Angebot: Startseite plus bis zu 3 Zusatzseiten für Leistungen, Über mich/Team, Preise oder andere wichtige Inhalte.", meta: "Startseite + bis zu 3 Zusatzseiten · 10–14 Tage", featured: true },
-    { name: "Business Website Plus", price: "1.700 €", desc: "Für umfangreiche Angebote und mehrere Leistungsbereiche – mit bis zu 10 Seiten und genügend Raum, um dein Unternehmen professionell und übersichtlich zu präsentieren.", meta: "Bis zu 10 Seiten · Umfang nach Absprache" },
+    { name: "Onepager", price: "500 €", desc: "Dein kompletter Webauftritt kompakt auf einer Seite – ideal für Selbstständige und Unternehmen, die professionell online sichtbar sein möchten.", meta: "1 Seite · 5–7 Tage", support: "2 Korrekturrunden · 14 Tage Support", analysis: false },
+    { name: "Business Website", price: "900 €", desc: "Mehr Raum für dein Angebot: Startseite plus bis zu 3 Zusatzseiten für Leistungen, Über mich/Team, Preise oder andere wichtige Inhalte.", meta: "Startseite + bis zu 3 Zusatzseiten · 10–14 Tage", support: "4 Korrekturrunden · 30 Tage Support", analysis: true, featured: true },
+    { name: "Business Website Plus", price: "1.700 €", desc: "Für umfangreiche Angebote und mehrere Leistungsbereiche – mit Startseite und bis zu 10 Zusatzseiten.", meta: "Startseite + bis zu 10 Zusatzseiten · Zeitrahmen nach Absprache", support: "4 Korrekturrunden · 30 Tage Support", analysis: true },
   ];
   const print = [
     ["Flyer einseitig", "100 €"], ["Flyer zweiseitig", "150 €"], ["Roll-Up / Banner", "200 €"],
@@ -226,10 +226,14 @@ function Angebot() {
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{pkg.desc}</p>
               <p className="mt-6 text-3xl font-bold text-ink">{pkg.price} <span className="text-sm font-normal text-muted-foreground">einmalig</span></p>
               <p className="mt-2 text-xs text-muted-foreground">{pkg.meta}</p>
+              <p className="mt-2 text-xs text-muted-foreground">{pkg.support}</p>
+              {pkg.analysis && <p className="mt-2 text-xs font-medium text-ink">Online-Präsenz Analyse inklusive</p>}
             </div>
           ))}
         </div>
-        <p className="mt-4 text-sm text-muted-foreground text-center">Du brauchst mehr als 10 Seiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.</p>
+        <p className="mt-4 text-sm text-muted-foreground text-center">Zusatzseiten sind Inhaltsseiten neben der Startseite. Impressum und Datenschutzerklärung zählen nicht dazu.</p>
+        <p className="mt-2 text-sm text-muted-foreground text-center">Du brauchst mehr als 10 Zusatzseiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.</p>
+        <p className="mt-4 text-center"><Link href="/preise" className="text-sm font-medium text-primary underline underline-offset-4 hover:text-mauve">Alle Paketdetails und Preise ansehen</Link></p>
 
         <div className="mt-14 grid md:grid-cols-2 gap-6">
           <div className="rounded-3xl border border-border/60 bg-background p-7">

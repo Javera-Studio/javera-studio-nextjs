@@ -26,6 +26,7 @@ export function Navbar() {
           <a href="#warum" className="hover:text-ink transition">Warum</a>
           <a href="#ablauf" className="hover:text-ink transition">Ablauf</a>
           <a href="#angebot" className="hover:text-ink transition">Leistungen</a>
+          <Link href="/preise" className="hover:text-ink transition">Preise</Link>
           <a href="#about" className="hover:text-ink transition">Über mich</a>
           <a href="#faq" className="hover:text-ink transition">FAQ</a>
         </nav>
@@ -58,6 +59,7 @@ export function Navbar() {
             <a href="#warum" onClick={close} className="py-2.5 hover:text-ink transition">Warum</a>
             <a href="#ablauf" onClick={close} className="py-2.5 hover:text-ink transition">Ablauf</a>
             <a href="#angebot" onClick={close} className="py-2.5 hover:text-ink transition">Leistungen</a>
+            <Link href="/preise" onClick={close} className="py-2.5 hover:text-ink transition">Preise</Link>
             <a href="#about" onClick={close} className="py-2.5 hover:text-ink transition">Über mich</a>
             <a href="#faq" onClick={close} className="py-2.5 hover:text-ink transition">FAQ</a>
             <a
