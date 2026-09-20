@@ -225,13 +225,13 @@ export default function PreisePage() {
             {/* Business Website Plus */}
             <div className="bg-background border border-border rounded-2xl p-8 flex flex-col">
               <p className="text-lg font-semibold text-ink mb-1">Business Website Plus</p>
-              <p className="text-sm text-muted-foreground">Für umfangreiche Angebote und mehrere Leistungsbereiche – mit bis zu 10 Seiten und genügend Raum, um dein Unternehmen professionell und übersichtlich zu präsentieren.</p>
+              <p className="text-sm text-muted-foreground">Für umfangreiche Angebote und mehrere Leistungsbereiche – mit Startseite und bis zu 10 Zusatzseiten, um dein Unternehmen professionell und übersichtlich zu präsentieren.</p>
               <div className="py-5">
                 <div className="text-3xl font-bold text-ink leading-none">
                   1.700 €{" "}
                   <span className="text-sm font-normal text-muted-foreground">einmalig</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">Bis zu 10 Seiten · Umfang nach Absprache</p>
+                <p className="text-sm text-muted-foreground mt-2">Startseite + bis zu 10 Zusatzseiten · Umfang nach Absprache</p>
               </div>
               <hr className="border-t border-border/60 mb-5" />
               <SectionLabel>Design &amp; Inhalt</SectionLabel>
@@ -255,7 +255,7 @@ export default function PreisePage() {
           </div>
 
           <p className="text-sm text-muted-foreground mt-4 text-center">
-            Du brauchst mehr als 10 Seiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.
+            Du brauchst mehr als 10 Zusatzseiten oder besondere Funktionen? Größere und individuelle Projekte kalkuliere ich passend zu deinem Bedarf.
           </p>
 
           {/* Online-Präsenz Analyse */}

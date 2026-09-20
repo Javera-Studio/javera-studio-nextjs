@@ -39,7 +39,7 @@ const services = [
 const websitePackages = [
   { name: "Onepager", price: "500 €", desc: "Dein kompletter Webauftritt auf einer Seite.", meta: "1 Seite · 5–7 Tage" },
   { name: "Business Website", price: "900 €", desc: "Startseite und bis zu 3 Zusatzseiten für dein Angebot, dein Team oder weitere Inhalte.", meta: "Startseite + bis zu 3 Zusatzseiten · 10–14 Tage", featured: true },
-  { name: "Business Website Plus", price: "1.700 €", desc: "Für mehrere Leistungsbereiche und umfangreiche Angebote.", meta: "Bis zu 10 Seiten · Umfang nach Absprache" },
+  { name: "Business Website Plus", price: "1.700 €", desc: "Für mehrere Leistungsbereiche und umfangreiche Angebote.", meta: "Startseite + bis zu 10 Zusatzseiten · Umfang nach Absprache" },
 ];
 
 const printPrices = [
@@ -169,7 +169,7 @@ function Pricing() {
             </div>
           ))}
         </div>
-        <p className="mt-4 text-center text-sm text-muted-foreground">Du brauchst mehr als 10 Seiten oder besondere Funktionen? Größere Projekte kalkuliere ich passend zu deinem Bedarf.</p>
+        <p className="mt-4 text-center text-sm text-muted-foreground">Du brauchst mehr als 10 Zusatzseiten oder besondere Funktionen? Größere Projekte kalkuliere ich passend zu deinem Bedarf.</p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {[
