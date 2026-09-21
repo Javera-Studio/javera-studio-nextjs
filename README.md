@@ -1,3 +1,5 @@
+⚠️ **Dieses Repository wird nicht mehr aktiv verwendet.** Die aktuelle Javera-Studio-Website befindet sich unter https://github.com/Javera-Studio/javera-studio.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
